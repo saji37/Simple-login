@@ -27,14 +27,14 @@ if(data.status === 'Ok'){
 console.log(data)
 }
   return (
-    <form onSubmit={registerUser}>
+    <form onSubmit={registerUser}>    
        <main className="form-signin w-100 m-auto">
         <div className='col-md-4'>
           <h1>Registration</h1><br/>
             <div className="form-floating">
               <input className="form-control" id="floatingInput"
                 onChange={(e)=> setName(e.target.value)}
-                type={'text'} placeholder="Name" value={name}/>
+                type={'tex  t'} placeholder="Name" value={name}/>
                 <label for="floatingInput">Name</label>
 <br/>
             </div>
@@ -50,7 +50,7 @@ console.log(data)
               type={'password'} placeholder="Password" value={password}/><br/>
                      <label for="floatingInput">Password</label>
           </div>
-          <input type={'submit'} value='Submit' className='btn btn-outline-primary'/>
+          <input type={'submit'} value='Submit' className='btn btn-outline-primary' size="lg"/>
        </div>
     </main>
   </form>

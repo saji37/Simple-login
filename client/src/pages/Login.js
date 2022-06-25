@@ -30,17 +30,24 @@ function Login() {
 
       return (
         <form onSubmit={loginUser}>
-        <div>
-            
+         <main className="form-signin w-100 m-auto">
+        <div className='col-md-4'>
           <h1>Login</h1><br/>
-          <input 
+          <div className="form-floating">
+              <input className="form-control" id="floatingInput"
                 onChange={(e)=> setEmail(e.target.value)}
-                type={'email'} placeholder="Email" value={email}/><br/>
-          <input
+                type={'email'} placeholder="Email" value={email}/>
+                <label for="floatingInput">Email</label>
+            </div><br/>
+            <div className="form-floating">
+              <input className="form-control" id="floatingInput"
                 onChange={(e)=> setPassword(e.target.value)}
-                type={'password'} placeholder="Password" value={password}/><br/>
-          <input type={"submit"} value="Login" />
-     </div>
+                type={'password'} placeholder="Password" value={password}/>
+                <label for="floatingInput">Password</label><br/>
+            </div>
+          <input type={"submit"} value="Login" className="btn btn-outline-primary"/>
+        </div>
+        </main>
      </form>
       )
 }

@@ -28,20 +28,32 @@ console.log(data)
 }
   return (
     <form onSubmit={registerUser}>
-    <div>
-      <h1>Registration</h1><br/>
-      <input 
-      onChange={(e)=> setName(e.target.value)}
-      type={'text'} placeholder="Name" value={name}/><br/>
-      <input 
-            onChange={(e)=> setEmail(e.target.value)}
-            type={'email'} placeholder="Email" value={email}/><br/>
-      <input
-            onChange={(e)=> setPassword(e.target.value)}
-            type={'password'} placeholder="Password" value={password}/><br/>
-      <input type="submit" value="Register"/>
- </div>
- </form>
+       <main className="form-signin w-100 m-auto">
+        <div className='col-md-4'>
+          <h1>Registration</h1><br/>
+            <div className="form-floating">
+              <input className="form-control" id="floatingInput"
+                onChange={(e)=> setName(e.target.value)}
+                type={'text'} placeholder="Name" value={name}/>
+                <label for="floatingInput">Name</label>
+<br/>
+            </div>
+          <div className="form-floating">
+              <input className="form-control" id="floatingInput"
+              onChange={(e)=> setEmail(e.target.value)}
+              type={'email'} placeholder="Email" value={email}/><br/>
+              <label for="floatingInput">Email address</label>
+          </div>
+          <div className="form-floating">
+              <input className="form-control" id="floatingInput"
+              onChange={(e)=> setPassword(e.target.value)}
+              type={'password'} placeholder="Password" value={password}/><br/>
+                     <label for="floatingInput">Password</label>
+          </div>
+          <input type={'submit'} value='Submit' className='btn btn-outline-primary'/>
+       </div>
+    </main>
+  </form>
   )
 }
 
